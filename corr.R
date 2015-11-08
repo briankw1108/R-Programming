@@ -1,6 +1,6 @@
 library(dplyr)
 corr = function(directory, threshold = 0) {
-        comp_data = complete(directory, 1:332)
+        comp_data = complete(directory, 1:332) #have to run "complete.R" to run complete function.
         fil_id = c(filter(comp_data, comp_data$nobs > threshold)$id)
         whole_corr = numeric()
         for (i in fil_id) {
